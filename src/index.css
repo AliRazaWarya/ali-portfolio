@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a10;
+  --surface: #12121a;
+  --surface-2: #171722;
+  --line: #24242f;
+  --text: #f1f1f5;
+  --muted: #9497a6;
+  --accent: #6c5ce7;
+  --accent-light: #a996ff;
+  --accent-rgb: 108, 92, 231;
+}
+
+[data-theme="light"] {
+  --bg: #f7f7fb;
+  --surface: #ffffff;
+  --surface-2: #f0f0f8;
+  --line: #e3e3ee;
+  --text: #14141c;
+  --muted: #63677a;
+  --accent: #6c5ce7;
+  --accent-light: #8f7bff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #0a0a10;
+  color: #f1f1f5;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, .font-display { font-family: "Space Grotesk", sans-serif; }
+.font-mono { font-family: "JetBrains Mono", monospace; }
+
+::selection { background: var(--accent); color: #fff; }
+
+.grid-backdrop {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(var(--accent-rgb), 0.16), transparent 40%),
+    radial-gradient(circle at 85% 60%, rgba(var(--accent-rgb), 0.10), transparent 45%);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--text), var(--accent-light) 55%, var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.pill {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.icon-box {
+  background: rgba(var(--accent-rgb), 0.14);
+  color: var(--accent);
+  border-radius: 0.7rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 0.7rem;
+}
+.btn-primary:hover { background: var(--accent-light); }
+
+.btn-outline {
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 0.7rem;
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+.float-slow { animation: float 6s ease-in-out infinite; }
+.float-slower { animation: float 8s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
