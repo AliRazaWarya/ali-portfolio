@@ -7,6 +7,8 @@ import { profile } from "../data/profile";
 import StatCounter from "../components/StatCounter";
 import Reveal from "../components/Reveal";
 
+const assetBase = import.meta.env.BASE_URL;
+
 const ICONS = {
   layers: HiOutlineCollection,
   brain: HiOutlineLightningBolt,
@@ -53,7 +55,7 @@ export default function Home() {
         {/* Full-bleed hero image */}
         <div className="absolute inset-0 hidden md:block">
           <img
-            src="/hero-bg.png"
+            src={`${assetBase}hero-bg.png`}
             alt=""
             className="w-full h-full object-cover object-[72%_center]"
           />
@@ -132,7 +134,7 @@ export default function Home() {
 
         {/* Mobile image */}
         <div className="md:hidden relative mx-6 mb-6 rounded-2xl overflow-hidden" style={{ aspectRatio: "16/11" }}>
-          <img src="/hero-bg.png" alt="AI Workspace" className="w-full h-full object-cover" />
+          <img src={`${assetBase}hero-bg.png`} alt="AI Workspace" className="w-full h-full object-cover" />
         </div>
 
         {/* Stats */}

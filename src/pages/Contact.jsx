@@ -7,6 +7,7 @@ import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
 import { FiSend } from "react-icons/fi";
 
 const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const assetBase = import.meta.env.BASE_URL;
 
 const socials = [
   { key: "email", icon: HiOutlineMail, label: "EMAIL", value: profile.email, href: `mailto:${profile.email}` },
@@ -46,7 +47,7 @@ export default function Contact() {
       {/* Full background image */}
       <div className="absolute inset-0">
         <img
-          src="/contact-bg.jpg"
+          src={`${assetBase}contact-bg.jpg`}
           alt=""
           className="w-full h-full object-cover object-center"
         />

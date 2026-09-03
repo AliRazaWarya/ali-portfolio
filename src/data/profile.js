@@ -1,3 +1,5 @@
+const assetBase = import.meta.env.BASE_URL;
+
 // ============================================================
 // ALL YOUR SITE CONTENT LIVES HERE.
 // Edit this one file to update anything on the website —
@@ -17,7 +19,7 @@ export const profile = {
   heroWords: ["Deep Learning", "LLMs", "Computer Vision", "Full-Stack Web", "Data Analytics"],
   summary:
     "A specialized Computing student and Data Scientist with a strong foundation in Deep Learning, LLMs, and full-stack web development. Expert in data analytics and web scraping, with a proven ability to build advanced CNN models, OCR systems, and automated data pipelines. Six years of operations leadership in retail and events bridge the gap between technical build and business execution.",
-  photo: "/profile.jpg", // drop your photo in /public as profile.jpg
+  photo: `${assetBase}profile.jpg`, // drop your photo in /public as profile.jpg
   resumeFile: "/Ali_Raza_CV.pdf", // drop your CV PDF in /public with this name
 
   social: {
@@ -151,7 +153,7 @@ export const profile = {
       description:
         "Final year project — a complete web application built with PHP and MySQL, featuring secure, role-based portals for admins, teachers, and students.",
       tags: ["PHP", "MySQL", "Web App"],
-      image: "/projects/school.jpg",
+      image: `${assetBase}projects/school.jpg`,
       link: "",
     },
     {
@@ -159,7 +161,7 @@ export const profile = {
       description:
         "CNN models trained for MNIST handwritten digit recognition and alphabetic letter classification.",
       tags: ["CNN", "Deep Learning", "Python"],
-      image: "/projects/deeplearning.jpg",
+      image: `${assetBase}projects/deeplearning.jpg`,
       link: "",
     },
     {
@@ -167,7 +169,7 @@ export const profile = {
       description:
         "Custom OCR software, AI text extractors, and facial gender prediction models built with OpenCV.",
       tags: ["OpenCV", "OCR", "Computer Vision"],
-      image: "/projects/ocr.jpg",
+      image: `${assetBase}projects/ocr.jpg`,
       link: "",
     },
     {
@@ -175,7 +177,7 @@ export const profile = {
       description:
         "A multilingual tool that analyzes sentiment from YouTube comments, CSV files, and website links.",
       tags: ["NLP", "Sentiment Analysis", "Python"],
-      image: "/projects/sentiment.jpg",
+      image: `${assetBase}projects/sentiment.jpg`,
       link: "",
     },
     {
@@ -183,7 +185,7 @@ export const profile = {
       description:
         "Weather prediction, house and mobile price regression models, and the classic Titanic survival ML analysis.",
       tags: ["Regression", "Machine Learning"],
-      image: "/projects/predictive.jpg",
+      image: `${assetBase}projects/predictive.jpg`,
       link: "",
     },
     {
@@ -191,7 +193,7 @@ export const profile = {
       description:
         "A professional, responsive website designed and shipped for a software house.",
       tags: ["Web Design", "Responsive"],
-      image: "/projects/softwarehouse.jpg",
+      image: `${assetBase}projects/softwarehouse.jpg`,
       link: "https://programmerden1214.web.app/",
     },
   ],

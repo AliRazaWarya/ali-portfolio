@@ -4,6 +4,8 @@ import StatCounter from "../components/StatCounter";
 import { motion } from "framer-motion";
 import { HiOutlineClock, HiOutlineCpuChip, HiOutlineServerStack, HiOutlineSparkles } from "react-icons/hi2";
 
+const assetBase = import.meta.env.BASE_URL;
+
 const journeyStats = [
   { label: "Years Leading Teams", value: 6, suffix: "+", icon: "clock" },
   { label: "AI Models Trained", value: 10, suffix: "+", icon: "chip" },
@@ -23,7 +25,7 @@ export default function Experience() {
     <div className="relative overflow-hidden">
       {/* Soft background art */}
       <div className="absolute inset-0 pointer-events-none opacity-30">
-        <img src="/bg.png" alt="" className="w-full h-full object-cover object-center" />
+        <img src={`${assetBase}bg.png`} alt="" className="w-full h-full object-cover object-center" />
         <div
           className="absolute inset-0"
           style={{
